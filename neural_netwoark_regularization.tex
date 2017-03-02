@@ -38,8 +38,16 @@
 \section{Introduction}
 	\subsection{Regularization}
 		\begin{frame}{What is Regularization?}
+			\begin{center}
+				Method of calibrating the complexity of our model  
+			\end{center}
+			
+		\end{frame}
+		
+		
+		\begin{frame}{What is Regularization?}
 			\begin{enumerate}
-				\item Method of calibrating the complexity of our model
+				
 				\item Very general (i.e., applicable to variety of models)
 				\item Penalized regression
 					\begin{enumerate} [1]
@@ -49,13 +57,11 @@
 					\end{enumerate}
 				\item XGBoost improvement on AdaBoost 
 			\end{enumerate}
-		\end{frame}
-			
+		\end{frame}	
 	
 		
 		
 	\subsection{Penalized Regression}
-	
 				
 		\begin{frame}{$L_2$ Regularization Regression}
 		\begin{enumerate}
@@ -125,7 +131,6 @@
 		\end{enumerate}
 		\end{frame}
 
-
 		\begin{frame}{Elastic Net}
 		\begin{enumerate}
 			\item Penalize \emph{both} the $L_1$ and ${L_2}$ norms of $\beta$
@@ -155,7 +160,74 @@
 			\item Proportion in training \textit{vs}. test set
 		\end{enumerate}
 		\end{frame}		
+	
+		\begin{frame}{Broader View cont.}
+		The essential feature of regularization is that it involves using some mechanism to control the complexity of our model. This makes our model more generalizable. 
+		\end{frame}		
+			
+\section{Regularizing Neural Networks}
+	\subsection{Norm Penalties}
+	
+	
+	\subsection{Drop Out}
 		
-\section{
+		\begin{frame}{Drop Out}
+		\begin{enumerate}
+			\item ...
+		\end{enumerate}
+		\end{frame}
 		
+		\begin{frame}{Compare with Random Forests}
+		Consider similarities with random feature subset selection in random forests. \newline 
+		
+		 Both have a kind of ``thinning'' effect on model by using randomization to artificially restrict the parameters.   
+		\end{frame}
+
+	\subsection{Data Augmentation}
+		
+		\begin{frame}{Data Augmentation}
+		\begin{enumerate}
+			\item Adding [synthetic] data
+			\item Or perturbing existing data 
+			\item Or both!
+			\item Similarities with 
+		\end{enumerate}
+		\end{frame}
+
+		
+		\begin{frame}{Data Augmentation Examples}
+		\begin{enumerate}
+			\item Translating images by a few pixels 
+			\item Injecting noise in speech recognition data
+		\end{enumerate}
+		\end{frame}
+		
+	
+	\subsection{Adversarial Training}
+		
+		\begin{frame}{Adversarial Training}
+		\begin{enumerate}
+			\item Szegedy \textit{et al.} 2014
+			\item Similar in a sense to data augmentation
+			\item Generate new observations in such a way as to maximize the chance they are misclassified
+		\end{enumerate}
+		\end{frame}
+		
+		\begin{frame}{Adversarial Training Example}
+			\begin{figure}
+				\includegraphics[scale = 0.25]{panda.png}
+			\end{figure}		
+    		\end{frame}
+\section{Conclusion}
+	\subsection{Summary}
+	
+	\subsection{Other Methods}
+		
+		\begin{frame}{Methods we Did Not Discuss}
+			\begin{enumerate}
+				\item Early stopping
+				\item Bagging (Breiman, 1994)
+				\item Parameter sharing (Laserre \textit{et al}., 2006)
+			\end{enumerate}
+		\end{frame}
 \end{document}
